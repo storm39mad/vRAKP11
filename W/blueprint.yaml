@@ -1,12 +1,13 @@
 name: Windows Server 2019
 version: 1.0
 resources:
-  Win2019:
+  Win-2019:
     type: Cloud.vSphere.Machine
     properties:
       image: tm-winsrv-2019
       cpuCount: 2
       totalMemoryMB: 4096
+      name: win-srv
       constraints: 
         - tag: account:vcsacluster.ouiit.local / DatacenterDELLAllFlash-1
       networks:
