@@ -1,21 +1,19 @@
 name: Windows Server 2019
 version: 1.0
 resources:
-  demo-machine:
-    type: Cloud.Machine
+  Win2019:
+    type: Cloud.vSphere.Machine
     properties:
-      image: WindowsServer2016
-      flavor: small
+      image: 'tm-winsrv-2019'
+      cpuCount: 2
+      totalMemoryMB: 4096
+      constraints: 
+        - tag: account:vcsacluster.ouiit.local / DatacenterDELLAllFlash-1
       networks:
-        - name: '${network-01.name}'
-          deviceIndex: 0
-        - name: '${network-02.name}'
-          deviceIndex: 1
-  network-01:
+        - network: ${resource.Android_lab.id}
+  Android_lab:
     type: Cloud.vSphere.Network
     properties:
-      name: network-01
-  network-02:
-    type: Cloud.vSphere.Network
-    properties:
-      name: network-02
+      networkType: existing
+      constraints: 
+        - tag: nsx-t-Android_labs
