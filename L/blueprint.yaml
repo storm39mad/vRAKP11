@@ -1,12 +1,12 @@
-name: Windows Server 2019
+name: ubuntu 22
 version: 1.0
 resources:
-  Win2019:
+  ubuntu22:
     type: Cloud.vSphere.Machine
     properties:
-      image: tm-winsrv-2019
-      cpuCount: 2
-      totalMemoryMB: 4096
+      image: tm-ubuntu-22.04.1-lts-amd64
+      cpuCount: 1
+      totalMemoryMB: 2048
       constraints: 
         - tag: account:vcsacluster.ouiit.local / DatacenterDELLAllFlash-1
       networks:
