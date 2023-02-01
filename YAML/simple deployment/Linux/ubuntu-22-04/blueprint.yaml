@@ -7,13 +7,15 @@ resources:
       image: tm-ubuntu-22.04.1-lts-amd64
       cpuCount: 1
       totalMemoryMB: 2048
+	 name: ubuntu22
       constraints: 
         - tag: account:vcsacluster.ouiit.local / DatacenterDELLAllFlash-1
       networks:
-        - network: ${resource.Android_lab.id}
-  Android_lab:
+        - network: ${resource.int_net_1.id}
+  int_net_1:
     type: Cloud.vSphere.Network
     properties:
       networkType: existing
+	 name: net_1
       constraints: 
         - tag: nsx-t-Android_labs
