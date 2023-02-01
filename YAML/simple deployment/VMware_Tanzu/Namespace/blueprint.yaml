@@ -1,0 +1,15 @@
+name: namespace
+version: 1.0
+resources:
+  Cloud_SV_Namespace_1:
+    type: Cloud.SV.Namespace
+    properties:
+      name: a
+      constraints:
+        - tag: k8swcp
+      storage:
+        - profile:
+            constraints:
+              - tag: k8sst
+      vm_classes:
+        - name: best-effort-small

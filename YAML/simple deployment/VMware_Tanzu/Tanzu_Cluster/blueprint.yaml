@@ -1,0 +1,12 @@
+name: Tanzu Cluster
+version: 1.0
+resources:
+  Cloud_Tanzu_Cluster_1:
+    type: Cloud.Tanzu.Cluster
+    properties:
+      name: aa
+      plan: dev
+      workers: 2
+      constraints:
+        - tag: k8sns
+
