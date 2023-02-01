@@ -8,7 +8,7 @@ resources:
       cpuCount: 2
       totalMemoryMB: 4096
       name: winsrv2019
-      constraints: 
+      constraints:
         - tag: account:vcsacluster.ouiit.local / DatacenterDELLAllFlash-1
       networks:
         - network: ${resource.nic_net_1.id}
@@ -16,5 +16,5 @@ resources:
     type: Cloud.vSphere.Network
     properties:
       networkType: existing
-      constraints: 
-        - tag: nsx-t-Android_labs
+      constraints:
+        - tag: HT2022

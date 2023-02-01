@@ -1,14 +1,14 @@
-name: ubuntu 22
+name: ubuntu22
 version: 1.0
 resources:
-  ubuntu22:
+  Win10:
     type: Cloud.vSphere.Machine
     properties:
       image: tm-ubuntu-22.04.1-lts-amd64
       cpuCount: 1
-      totalMemoryMB: 2048
-	 name: ubuntu22
-      constraints: 
+      totalMemoryMB: 1024
+      name: ubuntu22
+      constraints:
         - tag: account:vcsacluster.ouiit.local / DatacenterDELLAllFlash-1
       networks:
         - network: ${resource.nic_net_1.id}
@@ -16,6 +16,5 @@ resources:
     type: Cloud.vSphere.Network
     properties:
       networkType: existing
-	 name: net_1
-      constraints: 
-        - tag: nsx-t-Android_labs
+      constraints:
+        - tag: HT2022
