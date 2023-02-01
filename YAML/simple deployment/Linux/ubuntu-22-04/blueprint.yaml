@@ -11,8 +11,8 @@ resources:
       constraints: 
         - tag: account:vcsacluster.ouiit.local / DatacenterDELLAllFlash-1
       networks:
-        - network: ${resource.int_net_1.id}
-  int_net_1:
+        - network: ${resource.nic_net_1.id}
+  nic_net_1:
     type: Cloud.vSphere.Network
     properties:
       networkType: existing

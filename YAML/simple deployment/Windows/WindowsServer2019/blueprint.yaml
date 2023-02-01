@@ -1,18 +1,18 @@
 name: Windows Server 2019
 version: 1.0
 resources:
-  Win-2019:
+  WinSer2019:
     type: Cloud.vSphere.Machine
     properties:
       image: tm-winsrv-2019
       cpuCount: 2
       totalMemoryMB: 4096
-      name: win-srv
+      name: winsrv2019
       constraints: 
         - tag: account:vcsacluster.ouiit.local / DatacenterDELLAllFlash-1
       networks:
-        - network: ${resource.Android_lab.id}
-  Android_lab:
+        - network: ${resource.nic_net_1.id}
+  nic_net_1:
     type: Cloud.vSphere.Network
     properties:
       networkType: existing
