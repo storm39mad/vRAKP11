@@ -1,0 +1,20 @@
+name: Windows 10
+version: 1.0
+resources:
+  WinSer2019:
+    type: Cloud.vSphere.Machine
+    properties:
+      image: tm-winsrv-2019
+      cpuCount: 2
+      totalMemoryMB: 4096
+      name: winsrv2019
+      constraints: 
+        - tag: account:vcsacluster.ouiit.local / DatacenterDELLAllFlash-1
+      networks:
+        - network: ${resource.nic_net_1.id}
+  nic_net_1:
+    type: Cloud.vSphere.Network
+    properties:
+      networkType: existing
+      constraints: 
+        - tag: nsx-t-Android_labs
