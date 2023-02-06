@@ -1,7 +1,7 @@
 name: ubuntu22
 version: 1.0
 resources:
-  Win10:
+  ubuntu22:
     type: Cloud.vSphere.Machine
     properties:
       image: tm-ubuntu-22.04.1-lts-amd64
